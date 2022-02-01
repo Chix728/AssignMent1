@@ -1,0 +1,21 @@
+﻿@model AssignMent1.Models.boxingunboxing
+@{
+    ViewBag.Title = "boxingunboxing";
+}
+
+<h2>boxingunboxing</h2>
+@using (Html.BeginForm("boxingunboxing", "Home", FormMethod.Post))
+{
+
+    <div id="divInterestDeatils"></div>
+    <ol style="list-style:none;">
+        <li>
+            @Html.Label("Input Number")
+            @Html.TextBoxFor(m => m.num)
+        </li>
+        <li>
+            @Html.Label("Type of Input"):@ViewBag.TypeVarNum
+        </li>
+    </ol>   
+    <button>Convet to Object</button>
+}

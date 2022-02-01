@@ -1,0 +1,30 @@
+﻿
+@model AssignMent1.Models.boxingunboxing
+@{
+    ViewBag.Title = "ftoc";
+}
+
+<h2>ftoc</h2>
+
+@using (Html.BeginForm("ftoc", "Home", FormMethod.Post))
+{
+
+    <div id="divInterestDeatils"></div>
+    <ol style="list-style:none;">
+        <li>
+            @Html.Label("Input Farenhit:")
+            @Html.TextBoxFor(m => m.tempF)
+        </li>
+        <li>
+            @Html.Label("Input Celcius:")
+            @Html.TextBoxFor(m => m.tempC)
+        </li>
+        <li>
+            @Html.Label("Farenhit to Celcius:"):@ViewBag.ToC <br />
+            @Html.Label("Celcius to Farenhit:"):@ViewBag.ToF <br />
+
+        </li>
+    </ol>
+
+    <button>convert</button>
+}

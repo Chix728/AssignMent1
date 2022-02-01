@@ -1,0 +1,27 @@
+﻿
+
+<h2>Calculate Area of circle</h2>
+
+@model AssignMent1.Models.boxingunboxing
+@{
+    ViewBag.Title = "Polymorphism";
+}
+
+<h2>boxingunboxing</h2>
+@using (Html.BeginForm("poly", "Home", FormMethod.Post))
+{
+
+    <div id="divInterestDeatils"></div>
+    <ol style="list-style:none;">
+        <li>
+            @Html.Label("Input Radious:")
+            @Html.TextBoxFor(m => m.radious)
+        </li>        
+        <li>
+            @Html.Label("Area Of Circle"):@ViewBag.Area <br />
+           
+        </li>
+    </ol>
+
+    <button>convert</button>
+}

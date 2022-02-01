@@ -1,0 +1,32 @@
+﻿
+
+<h2>stringOps</h2>
+
+@model AssignMent1.Models.boxingunboxing
+@{
+    ViewBag.Title = "stringOps";
+}
+
+<h2>boxingunboxing</h2>
+@using (Html.BeginForm("stringOps", "Home", FormMethod.Post))
+{
+
+    <div id="divInterestDeatils"></div>
+    <ol style="list-style:none;">
+        <li>
+            @Html.Label("Input Fist Name:")
+            @Html.TextBoxFor(m => m.firstName)
+        </li>
+        <li>
+            @Html.Label("Input Last Name:")
+            @Html.TextBoxFor(m => m.lastName)
+        </li>
+        <li>
+            @Html.Label("Lower Case"):@ViewBag.ToLower <br />
+            @Html.Label("Upper Case"):@ViewBag.toUpper <br />
+            @Html.Label("Full name"):@ViewBag.fullName
+        </li>
+    </ol>
+
+    <button>convert</button>
+}
